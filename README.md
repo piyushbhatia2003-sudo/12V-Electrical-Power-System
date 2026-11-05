@@ -1,2 +1,17 @@
 # 12V-Electrical-Power-System
-Embedded C Firmware for a 12V EPS including GPIO power rail enabling/disabling, UART communication (command and telemetry) and ADC voltage and current monitoring
+
+This repository contains the embedded C firmware developed for a 12V Electrical Power System. This includes GPIO power rail enabling/disabling, UART communication (command and telemetry) and ADC voltage and current monitoring and fault handling.
+
+It was tested on an ATmega328P/ Arduino Undo (16 MHz), using Microchip Studio and PuTTy. 
+
+What it accomplishes:
+
+Enables and disables three power rails (12V, 5V, 3.3V) and 2 correspondiong load outputs named A and B for each rail using GPIO. 
+
+Monitors voltage and current using ATmega ADC
+
+Receives commands over UART from a PC emulating an OBC and responds with the appropriate response
+
+Power Sequence is enabled where higher power rails  must be turned on for lower ones to be turned on. (Eg. only 12V rail can be turned on if 5V is on and so on)
+
+Provides condition of Electrical Power System like Overvoltage, Undervoltage, Overcurrent
