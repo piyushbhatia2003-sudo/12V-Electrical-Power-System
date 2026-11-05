@@ -12,6 +12,4 @@ Monitors voltage and current using ATmega ADC
 
 Receives commands over UART from a PC emulating an OBC and responds with the appropriate response
 
-Power Sequence is enabled where higher power rails  must be turned on for lower ones to be turned on. (Eg. only 12V rail can be turned on if 5V is on and so on)
-
 Provides condition of Electrical Power System like Overvoltage, Undervoltage, Overcurrent
